@@ -24,3 +24,9 @@ const orgSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('org', orgSchema)
+
+orgSchema.post('delete', function(){
+  Project.deleteMany({org:this.id}); // he says this isn't right,  it's awaiting.
+})
+
+orgSchema.index({name:1}, {unique:true})
