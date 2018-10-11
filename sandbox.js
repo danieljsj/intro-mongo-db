@@ -52,4 +52,9 @@ connect()
     })
     .catch( e => console.error(e))
 
+
 // findOneAndCreate can have upsert=true.
+
+
+// can search string against an array, or $in {staff ['v', 'b', 'g']} ---- dollar sign operators ($lt:, $gt:)
+// sort('-openSisnce)')  descending
